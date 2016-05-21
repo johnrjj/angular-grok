@@ -30,7 +30,7 @@ import { Clock } from './clock-component';
 })
 export class App {
   click$ = new Subject()
-    .map((value: string) => ({type: HOUR, payload: parseInt(value)}));
+    .map((value: string) => ({ type: HOUR, payload: parseInt(value) }));
 
   recall$ = new Subject();
 
