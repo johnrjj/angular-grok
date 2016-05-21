@@ -30,7 +30,7 @@ import { Clock } from './clock-component';
 })
 export class App {
   click$ = new Subject()
-            .map((value: string) => ({type: HOUR, payload: parseInt(value)}));
+    .map((value: string) => ({type: HOUR, payload: parseInt(value)}));
 
   recall$ = new Subject();
 
@@ -38,8 +38,8 @@ export class App {
     .map(value => ({ payload: value, type: 'ADVANCE' }));
 
   seconds$ = Observable
-              .interval(1000)
-              .mapTo({ type: SECOND, payload: 1 });
+    .interval(1000)
+    .mapTo({ type: SECOND, payload: 1 });
 
   time;
   people;
